@@ -27,6 +27,11 @@ directory node[:s9y_socialcaster][:deploydir] do
 	action :create
 end
 
+user node[:s9y_socialcaster][:user]  do
+  action :create
+  comment "App User"
+end
+
 %w{ shared shared/log shared/tmp }.each do |d|
 	directory "#{node[:s9y_socialcaster][:deploydir]}/#{d}" do
 		owner  node[:s9y_socialcaster][:user]
@@ -51,11 +56,6 @@ cookbook_file "/etc/init.d/unicorn_s9y-socialcaster" do
 	group "root"
 	mode "0755"
 end
-
-# user node[:s9y_socialcaster][:user]  do
-# 	action :create
-# 	comment "App User"
-# end
 
 package "mysql-devel" do
 	action :install
@@ -91,8 +91,8 @@ deploy_revision node[:s9y_socialcaster][:deploydir] do
 	# environment "RAILS_ENV" => "production", "OTHER_ENV" => "foo"
 	shallow_clone true
 	notifies :run,     'rvm_shell[bundle_gems]', :immediately
-  	notifies :restart, 'service[unicorn_s9y-socialcaster]'	
-  	action :deploy # or :rollback
+	notifies :restart, 'service[unicorn_s9y-socialcaster]'	
+	action :deploy # or :rollback
 end
 
 
