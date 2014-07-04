@@ -1,0 +1,39 @@
+---
+driver_plugin: vagrant
+driver_config:
+  require_chef_omnibus: true
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: centos-6.5
+    driver_config: 
+      image: "centos-6.5"
+    run_list:
+        - recipe[yum]
+        - recipe[yum-epel]
+
+suites:
+  - name: default
+    run_list:
+      - recipe[git]
+      - recipe[apache2]
+      - recipe[memcached]
+      - recipe[php5]
+      - recipe[mysql::server]
+      - recipe[mysql::client]
+      - recipe[mysql::ruby]
+      - recipe[database]
+      - recipe[s9y::prep]
+      - recipe[s9y::apache2]
+      - recipe[s9y::db]
+      - recipe[s9y::framework]
+      - recipe[s9y::plugins]
+      - recipe[s9y::templates]
+      - recipe[s9y_socialcaster]
+    attributes:
+      s9y:
+        sites:
+          - "test_kitchen_ci"
+        base_dir: "/var/www/vhost"
