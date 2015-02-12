@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 's9y_socialcaster::default' do
+describe 's9y_socialcaster::_app' do
 
   platforms = {
       'centos' => ['6.6']
@@ -45,8 +45,7 @@ describe 's9y_socialcaster::default' do
                                                                                                   "redis_host" => "localhost",
                                                                                                   "redis_port" => "6379"
                                                                                               }
-                                                                                          })
-    stub_command("bash -c \"source /home/app/.rvm/scripts/rvm && type rvm | cat | head -1 | grep -q '^rvm is a function$'\"").and_return(1)
+                                                                                     })
   end
 
   platforms.each do |platform, versions|
@@ -59,24 +58,8 @@ describe 's9y_socialcaster::default' do
           end.converge(described_recipe)
         end
 
-        it "should include s9y_socialcaster::_prep" do
-          chef_run.should include_recipe 's9y_socialcaster::_prep'
-        end
-
-        it 'should include s9y_socialcaster::_service' do
-          chef_run.should include_recipe 's9y_socialcaster::_service'
-        end
-
-        it 'should include rvm::user' do
-          chef_run.should include_recipe 'rvm::user'
-        end
-
-        it 'should include s9y_socialcaster::_app' do
-          chef_run.should include_recipe 's9y_socialcaster::_app'
-        end
-
-        it 'should include s9y_socialcaster::_trigger' do
-          chef_run.should include_recipe 's9y_socialcaster::_trigger'
+        it 'creates a config.yml file from template' do
+          expect(chef_run).to render_file('/var/www/apps/shared/config.yml')
         end
       end
     end

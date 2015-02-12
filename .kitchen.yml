@@ -1,23 +1,30 @@
 ---
-driver_plugin: vagrant
-driver_config:
-  require_chef_omnibus: true
+driver:
+  name: vagrant
+  config:
+    require_chef_omnibus: true
+  customize:
+    memory: 1024
+    cpus: 1
+  network:
 
 provisioner:
   name: chef_zero
+  encrypted_data_bag_secret_key_path: test/integration/tk_encrypted_data_bag_secret
+  data_bags_path: test/integration/data_bags
+  environments_path: test/environments
+  client_rb:
+    environment: kitchen
 
 platforms:
-  - name: centos-6.5
-    driver_config: 
-      image: "centos-6.5"
+  - name: centos-6.6
     run_list:
         - recipe[yum]
         - recipe[yum-epel]
-
 suites:
   - name: default
     run_list:
       - recipe[git]
-      - recipe[rvm::user]
+      - recipe[s9y_socialcaster::_test_database]
       - recipe[s9y_socialcaster]
     attributes:

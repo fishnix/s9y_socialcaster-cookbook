@@ -1,38 +1,38 @@
-send_tweets: <%= node[:s9y_socialcaster][:send_tweets] %>
-secret_token: "<%= node[:s9y_socialcaster][:secret_token] %>"
-base_url:     "<%= node[:s9y_socialcaster][:base_url] %>"
-tries_limit: <%= node[:s9y_socialcaster][:tries_limit] %>
+send_tweets: <%= @send_tweets %>
+secret_token: "<%= @config['secret_token'] %>"
+base_url:     "<%= @config['base_url'] %>"
+tries_limit: <%= @config['tries_limit'] %>
 teasers:
-<% node[:s9y_socialcaster][:teasers].each do |t| -%>
+<% @config['teasers'].each do |t| -%>
   - "<%= t %>"
 <% end %>
 excluded_categories:
-<% node[:s9y_socialcaster][:excluded_categories].each do |ec| -%>
+<% @config['excluded_categories'].each do |ec| -%>
   - "<%= ec %>"
 <% end %>
 included_categories:
-<% node[:s9y_socialcaster][:included_categories].each do |ic| -%>
+<% @config['included_categories'].each do |ic| -%>
   - "<%= ic %>"
 <% end %>
-add_via: <%= node[:s9y_socialcaster][:add_via] %>
-zone_offset: <%= node[:s9y_socialcaster][:zone_offset] %>
+add_via: <%= @config['add_via'] %>
+zone_offset: <%= @config['zone_offset'] %>
 database:
-  mysql_host:   "<%= node[:s9y_socialcaster][:database][:mysql_host] %>"
-  mysql_port:   "<%= node[:s9y_socialcaster][:database][:mysql_port] %>"
-  mysql_user:   "<%= node[:s9y_socialcaster][:database][:mysql_user] %>"
-  mysql_pass:   "<%= node[:s9y_socialcaster][:database][:mysql_pass] %>"
-  mysql_db:     "<%= node[:s9y_socialcaster][:database][:mysql_db] %>"
-  table_prefix: "<%= node[:s9y_socialcaster][:database][:table_prefix] %>"
+  mysql_host:   "<%= @config['database']['mysql_host'] %>"
+  mysql_port:   "<%= @config['database']['mysql_port'] %>"
+  mysql_user:   "<%= @config['database']['mysql_user'] %>"
+  mysql_pass:   "<%= @config['database']['mysql_pass'] %>"
+  mysql_db:     "<%= @config['database']['mysql_db'] %>"
+  table_prefix: "<%= @config['database']['table_prefix'] %>"
 shortener:
-  type:  "<%= node[:s9y_socialcaster][:shortener][:type] %>"
-  username:  "<%= node[:s9y_socialcaster][:shortener][:username] %>"
-  token: "<%= node[:s9y_socialcaster][:shortener][:token] %>"
+  type:  "<%= @config['shortener']['type'] %>"
+  username:  "<%= @config['shortener']['username'] %>"
+  token: "<%= @config['shortener']['token'] %>"
 twitter:
-  username: "<%= node[:s9y_socialcaster][:twitter][:username] %>"
-  consumer_key: "<%= node[:s9y_socialcaster][:twitter][:consumer_key] %>"
-  consumer_secret: "<%= node[:s9y_socialcaster][:twitter][:consumer_secret] %>"
-  access_token: "<%= node[:s9y_socialcaster][:twitter][:access_token] %>"
-  access_token_secret: "<%= node[:s9y_socialcaster][:twitter][:access_token_secret] %>"
+  username: "<%= @config['twitter']['username'] %>"
+  consumer_key: "<%= @config['twitter']['consumer_key'] %>"
+  consumer_secret: "<%= @config['twitter']['consumer_secret'] %>"
+  access_token: "<%= @config['twitter']['access_token'] %>"
+  access_token_secret: "<%= @config['twitter']['access_token_secret'] %>"
 reporting:
-  redis_host:   "<%= node[:s9y_socialcaster][:reporting][:redis_host] %>"
-  redis_port:   "<%= node[:s9y_socialcaster][:reporting][:redis_port] %>"
+  redis_host:   "<%= @config['reporting']['redis_host'] %>"
+  redis_port:   "<%= @config['reporting']['redis_port'] %>"

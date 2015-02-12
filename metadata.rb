@@ -1,10 +1,20 @@
-name              "s9y_socialcaster"
-maintainer       "E Camden Fisher"
-maintainer_email "fish@fishnix.net"
-license          "Apache 2.0"
-description      "Installs/Configures s9y-socialcaster"
-long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.0.3"
-depends "git"
-depends "rvm"
-depends "redis"
+name              's9y_socialcaster'
+maintainer        'E Camden Fisher'
+maintainer_email  'fish@fishnix.net'
+license           'Apache 2.0'
+description       'Installs/Configures s9y-socialcaster'
+long_description  'Installs/Configures s9y-socialcaster'
+version           '1.0.0'
+
+depends 'git'
+depends 'yum', '~> 3.4.1'
+depends 'yum-epel', '~> 0.5.2'
+depends 'build-essential', '~> 2.1.3'
+depends 'rvm', '~> 0.9.2'
+depends 'redisio', '~> 2.2.4'
+
+depends 'database', '~> 4.0.1'
+depends 'mysql', '~> 6.0.13'
+depends 'mysql2_chef_gem', '~> 1.0.1'
+
+depends 'selinux', '~> 0.8.0'

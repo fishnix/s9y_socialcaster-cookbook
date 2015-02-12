@@ -1,0 +1,75 @@
+{
+  "id": "default",
+  "zone_offset": {
+    "encrypted_data": "+JV7+WoiOO4Z0hu6+mEgjDu4gcPFBtlBM4htTyLRDDE=\n",
+    "iv": "DUHFaYHVKH1Q0KItIsP+2A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "secret_token": {
+    "encrypted_data": "4TfJJqa5pJEu6VGKeAfLxUWRq0gSzWyqXFDZcNZI7D8gAVsMzGemLgpempyQ\nak6S\n",
+    "iv": "u+zfTY/Sftv0oK30Au9j7w==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "base_url": {
+    "encrypted_data": "Z+icZb+fWMxoW41ghb93EKtZtUyCly8Dskwrll/uLY5MIDdiRpCouo9PNQOc\nAUUU\n",
+    "iv": "AiV1NGcSlbr5ubI8k4FNLg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "tries_limit": {
+    "encrypted_data": "a6CbxtS3vHTdoT9UB0fF/zryJqdrcQl2S82qzM6KItA=\n",
+    "iv": "VHd8PFMWcH/l1gGZXVG21A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "teasers": {
+    "encrypted_data": "KRhJhFlfj6z4YjfVHXF0LhstTXvzv5cxqvhefLZT7UChuKVnJdGTxyZUAc8c\nJY8FsOESJS+6vAE5yJg0WyI+7O92ff+nWWAhuwEMMMg0bUv0lq1vjuamLVus\n5KhmSEm3\n",
+    "iv": "qhX3ufXlhplr2TMP1X/i5w==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "add_via": {
+    "encrypted_data": "9+ezcK2fQATXOuhhUVns8RiA4r8VP8/QrFZ6/M7F+7A=\n",
+    "iv": "9UZy7itToK54lxgqTmfKEw==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "excluded_categories": {
+    "encrypted_data": "H0W4z+bovISHZvRQ/ihZ5pIt/9z59eBqmtnsEXBoF7g=\n",
+    "iv": "P0434oByrTHq58hftNe//A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "included_categories": {
+    "encrypted_data": "sd/HUdUmMQ2UnpKGmYER78tk44jV4sCCSu6pBwNDVqQ=\n",
+    "iv": "tlPrJKW4Vp1DZ5g51EkY8A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "database": {
+    "encrypted_data": "cjdT/iJMXyKy8U55hQypCw6/Vhj474Bkr0DqhmkJ+C47P+ieH/FFisuXIMDc\nvR3HwyjS/ByP9AisDPXTYVvXyLtE0l10aKJuTkSeFvGWeMeftq0edzofPuTt\nqeIpYwAiHUbNdXLAdB7P7X9/Y8O4HnXTbOzCt9/4vXzaLsfa6YBj4xEPYtPp\n3BqfG5WgYu92nsHyD4DVBvoZ8GrFyv/CZGiN/arZ3kOPBeCIiiwAXfQ28G5+\nQ0A+lZe6sGk1R+N3\n",
+    "iv": "ou95EqJXKhDl2DOd9J0tHA==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "shortener": {
+    "encrypted_data": "zInwe+0Hi1YCYID6enF0RtlDiQCQrtYpBDvZzCQ67pp0H9GsgMoNuiLl1xAK\np7fWL1PvwNV7+/ieydFGr5o24RedOk0mmm+FL0oOjTfXjexfmKqz9B8XYoBu\nvt6OOcla\n",
+    "iv": "arQRMNQ4YHsiEb+EiwGm5A==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "twitter": {
+    "encrypted_data": "lYPGK4ISuGRpEcXJfLtUi7ybfCO9TdhFWemJKchwZ7EDAq4nreEgdwsxIekd\nQdhnXNMZWTTruCFdu4s3A+PLk8s6KAoQphqJEOFMh3uG/dlowFuEwEi7BcSl\ntHaOaDs8r1uIYJHrPzfDewiu+Ew8CoG2ApQNQ0/VhfP7fr1gxKswCKLzimaN\nbQ0VpwbO89YcaRRPJmJl6b9M9lcKgnLq1fQWTUKirk6OgKO4W3uCnZLgKpkX\naiwRSx9254A8BL+1UYNgBlsB5QPrsR7IeoBB2J92C2Gn5lUgLGrUFyuYPFc=\n",
+    "iv": "XM718KaQyJDSSF6Y6BkGdQ==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  },
+  "reporting": {
+    "encrypted_data": "MmgrTI9aBzhzRUyW3TXPBn6FSDKPvjdE8fjnyIkE70yBn3c+7QONFFW1bBlb\nsURT+WLo1VVeemNz+X/DMhgGLA==\n",
+    "iv": "PIaiMlwZ8MAG53cIt62Hbg==\n",
+    "version": 1,
+    "cipher": "aes-256-cbc"
+  }
+}
