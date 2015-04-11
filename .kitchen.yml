@@ -25,6 +25,7 @@ suites:
   - name: default
     run_list:
       - recipe[git]
+      - recipe[rvm::vagrant]
       - recipe[s9y_socialcaster::_test_database]
       - recipe[s9y_socialcaster]
     attributes:

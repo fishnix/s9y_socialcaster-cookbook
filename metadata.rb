@@ -4,7 +4,7 @@ maintainer_email  'fish@fishnix.net'
 license           'Apache 2.0'
 description       'Installs/Configures s9y-socialcaster'
 long_description  'Installs/Configures s9y-socialcaster'
-version           '1.0.0'
+version           '1.1.0'
 
 depends 'git'
 depends 'yum', '~> 3.4.1'
