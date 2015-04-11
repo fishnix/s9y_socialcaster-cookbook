@@ -49,6 +49,7 @@ deploy_revision node['s9y_socialcaster']['deploydir'] do
   symlink_before_migrate nil
   create_dirs_before_symlink []
   symlinks(
+      'config/config.yml' => 'config.yml',
       'config.yml' => 'config.yml',
       'log' => 'log',
       'tmp' => 'tmp'
